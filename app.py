@@ -7,7 +7,7 @@ from typing_extensions import Annotated
 
 from utils import VerifyToken
 
-import datetime
+from datetime import datetime
 import pandas as pd
 from prophet import Prophet
 
