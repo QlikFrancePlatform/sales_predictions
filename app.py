@@ -1,9 +1,5 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, PlainTextResponse
-from pydantic import BaseModel
-from sse_starlette.sse import EventSourceResponse
-from fastapi.security import OAuth2PasswordBearer, HTTPBearer
-from typing_extensions import Annotated
 
 from utils import VerifyToken
 
@@ -18,6 +14,7 @@ app = FastAPI(
 
 auth = VerifyToken()
 
+# home page
 @app.get("/", response_class=PlainTextResponse)
 async def running():
   note = """
@@ -32,6 +29,7 @@ favicon_path = 'favicon.png'
 async def favicon():
     return FileResponse(favicon_path)
 
+# Predict Sales 
 @app.post("/prophet")
 async def insights(request: Request):
     data = await request.json()

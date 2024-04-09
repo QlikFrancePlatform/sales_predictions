@@ -60,6 +60,6 @@ curl -X 'POST' \
 Test a private access with this
 
 ```curl
-curl -X 'GET'   'http://localhost:8000/private'   -H 'accept: application/json'
+curl -X 'GET'   'http://localhost:8000/'   -H 'accept: application/json' \
   -H 'Authorization: Bearer <TOKEN>
 ```
