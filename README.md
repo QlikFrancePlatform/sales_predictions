@@ -1,4 +1,4 @@
-# Install
+# Install Python Sales Predictions 
 
 ## Activate virtual environment
 
