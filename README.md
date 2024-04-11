@@ -63,3 +63,24 @@ Test a private access with this
 curl -X 'GET'   'http://localhost:8000/'   -H 'accept: application/json' \
   -H 'Authorization: Bearer <TOKEN>
 ```
+
+## Qlik Sense Configuration
+
+You need to use a Advanced Analytics Connector for predict Sales Future revenue.
+
+Please read [Advanced Analytic analytics source](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/LoadData/ac-advanced-analytic-overview.htm)
+
+[Creating an Advanced Analytic connection](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/LoadData/ac-advanced-analytic-create.htm)
+
+Example about Advanced Analytics Connection for this Script.
+
+![Add URL of this API](assets/Advanced-Analytics-Connector1.png)
+
+![Add Response Table](assets/Advanced-Analytics-Connector2.png)
+
+Response Table:
+
+**Table Fields (JMESPath)**: The Table fields can be specified by adding:
+    Name: the name of the table that will be loaded in the app.
+    Value: the name of the response row in the JSON response array.
+JMESPath query language can be used to parse the JSON response array.
